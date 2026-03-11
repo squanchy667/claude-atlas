@@ -1,0 +1,25 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "command": "bash hooks/scope-guard.sh"
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "command": "bash hooks/file-tracker.sh"
+      },
+      {
+        "matcher": "Edit",
+        "command": "bash hooks/test-integrity.sh"
+      }
+    ],
+    "Stop": [
+      {
+        "command": "bash hooks/session-end.sh"
+      }
+    ]
+  }
+}
