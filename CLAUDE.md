@@ -97,11 +97,41 @@ These are hard rules. Violating any one of them is a session failure.
 
 7. **Never proceed past a blocker without documenting in status/blockers.md.** If something blocks you, log it with impact and workaround attempts. Do not silently work around it.
 
-8. **Never modify a pre-existing test to make it pass.** If a test fails, the code is wrong, not the test. If the test is genuinely wrong, flag it as drift and get human approval before changing it.
+8. **Never modify tests, weaken assertions, or adjust acceptance criteria to make a failing task appear to pass.** Tests and agreements define requirements. If reality doesn't match, that is drift — document it and flag it. Do not adjust the target. See "Integrity Rules" below.
 
 9. **Never create a skill without checking skills/active/ and skills/archive/ first.** Duplicate skills create confusion. Check before creating.
 
 10. **If unsure: stop, ask, document.** Write what you are unsure about in the current task's outcome.md or in atlas/gaps.md. Then ask the human. Never guess on ambiguous requirements.
+
+---
+
+## Integrity Rules — Zero Tolerance
+
+These rules exist because Claude's natural instinct is to make things work — even if that means quietly adjusting the definition of "working." This section exists to block that instinct.
+
+### Tests Are Requirements
+- Tests define what the code must do. The code must pass the tests as written.
+- You may NOT modify a pre-existing test to make it pass. Ever.
+- You may NOT weaken an assertion (e.g., changing `.toBe(5)` to `.toBeDefined()`).
+- You may NOT delete a test that is failing.
+- You may NOT skip a test (`it.skip`, `xit`, `@skip`) to hide a failure.
+- If a test is genuinely wrong (tests the wrong behavior), flag it as CRITICAL drift and get human approval before touching it.
+
+### Agreements Are Locked
+- Once `agreement.md` has status APPROVED, its checkpoint parameters are frozen.
+- You may NOT modify checkpoint parameters after approval to match a different outcome.
+- You may NOT weaken acceptance criteria (e.g., changing "responds in under 100ms" to "responds successfully").
+- You may NOT add qualifiers to pass criteria (e.g., changing "all tests pass" to "all tests pass except...").
+- If the implementation cannot meet the agreed parameters, that is drift — document it, do not adjust the target.
+
+### Outcomes Must Be Honest
+- `outcome.md` describes what was ACTUALLY built, not what was supposed to be built.
+- If something doesn't work, say it doesn't work. Do not describe a partial result as complete.
+- If tests fail, report the failures. Do not omit them.
+- `checkpoint.md` self-validation must reflect reality. "Honest uncertainty" means listing what you know is wrong or incomplete.
+
+### The Principle
+The goal is never to make a task LOOK complete. The goal is to make a task BE complete. If it isn't complete, the system is designed to handle that — revisions exist for a reason. Faking completion is worse than flagging incompleteness.
 
 ---
 

@@ -28,6 +28,13 @@ If `agreement.md` does not exist, stop and say: "No agreement found for this tas
 
 If `outcome.md` does not exist, stop and say: "No outcome recorded for this task. Run `/task phase-[N] task-[M] complete` first."
 
+### Criteria Verification
+
+Before presenting the comparison, verify that the agreement has not been modified since approval:
+1. Check the git history of `[TASK_DIR]/agreement.md`. If it was modified after the approval timestamp, flag this immediately: "WARNING: agreement.md was modified after approval. The checkpoint parameters may have been altered."
+2. Check the git history of any test files in `[TASK_DIR]/tests/`. If pre-existing tests were modified, flag: "WARNING: Pre-existing test files were modified during this task. This requires human review."
+3. Present any flags before the comparison so the human can investigate.
+
 ## Step 2: Present Side-by-Side Comparison
 
 For each checkpoint parameter from the agreement, present a comparison:

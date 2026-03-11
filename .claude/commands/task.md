@@ -190,15 +190,29 @@ Create `[TASK_DIR]/outcome.md`:
 
 ### 2. Drift Interrogation
 
-Ask yourself these questions honestly. Do not skip any.
+Ask yourself these questions honestly. Do not skip any. Do not rationalize.
 
-- "Did anything deviate from the agreement?"
+**Scope drift:**
 - "Did I modify any file not listed in the agreement's scope?"
+- "Did I add any dependency not in the original plan?"
+
+**Implementation drift:**
+- "Did anything deviate from the agreement?"
 - "Did I fix anything without documenting it?"
 - "Did I make any decision not in the plan?"
 - "Did the implementation differ from what the demo moment described?"
 
-If ANY answer is yes, immediately create or append to `[TASK_DIR]/drift.md`:
+**Criteria integrity (CRITICAL — answer each one explicitly):**
+- "Did I modify any test that existed before this task started?"
+- "Did I weaken any test assertion (e.g., made it less specific)?"
+- "Did I skip, disable, or delete any test?"
+- "Did I modify the checkpoint parameters in agreement.md?"
+- "Did I change any acceptance criteria to match my implementation instead of fixing my implementation to match the criteria?"
+- "Did I describe something as working in outcome.md that I know has issues?"
+
+If ANY criteria integrity question is yes, this is a CRITICAL drift event. Mark severity as CRITICAL. The checkpoint cannot be self-approved. The human must be notified before any commit.
+
+If ANY other answer is yes, immediately create or append to `[TASK_DIR]/drift.md`:
 ```markdown
 ## Drift: [DRIFT_ID]
 - **Timestamp:** [now]

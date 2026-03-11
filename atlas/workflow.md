@@ -268,6 +268,29 @@ Claude presents:
 
 ---
 
+### The Integrity Contract
+
+Claude Atlas enforces a strict separation between requirements and implementation:
+
+**Requirements** are defined in `agreement.md` (checkpoint parameters) and `test-spec.md` (test criteria). They are written BEFORE implementation begins and locked after approval.
+
+**Implementation** is the code that must satisfy those requirements.
+
+**The direction is always: fix the implementation to match the requirements.** Never adjust requirements to match a broken implementation. This is the single most important rule in the system.
+
+Why this matters: Claude's instinct is to deliver a clean result. If reality is messy, Claude will try to clean up the report rather than report the mess. Atlas fights this by:
+1. Locking agreements after approval
+2. Running test integrity hooks that detect modifications to test files
+3. Asking explicit criteria integrity questions during drift interrogation
+4. Requiring human review of every checkpoint — the human sees the running program, not just Claude's report
+
+If a task genuinely cannot meet its agreed criteria, the correct action is:
+1. Document the gap in `drift.md` with CRITICAL severity
+2. Report it honestly in `checkpoint.md` self-validation
+3. Let the human decide: revise the implementation, revise the criteria (with documented justification), or accept the gap
+
+---
+
 ## What the Human Does vs What Claude Does
 
 | Step | Human | Claude |
