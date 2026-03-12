@@ -168,11 +168,33 @@ When active:
 
 > Filled by /atlas-setup. Do not edit manually.
 
-[PROJECT_NAME: not configured]
-[PROJECT_TYPE: not configured]
-[PROJECT_DESCRIPTION: not configured]
-[TECH_STACK: not configured]
-[REPO_PATH: not configured]
-[TEAM_SIZE: not configured]
-[CURRENT_PHASE: not started]
-[TOTAL_PHASES: not planned]
+[PROJECT_NAME: DogPack Roguelite]
+[PROJECT_TYPE: 2D Game (Unity)]
+[PROJECT_DESCRIPTION: A 2D top-down roguelite where players control dog characters through procedurally generated dungeon runs with combat, dodge-rolling, and a home base (The Kennel) for managing and upgrading their pack of rescued dogs between runs.]
+[TECH_STACK: Unity 2022.3 LTS, C#, 2D URP, Singleton-Events-ScriptableObject pattern, Unity Input System, Unity Animator, Canvas UI, 2D Tilemap]
+[REPO_PATH: /Users/ofek/Projects/Claude/AtlasTest/CultRoguelite/]
+[TEAM_SIZE: 1 (solo)]
+[CURRENT_PHASE: 1 (pending planning)]
+[TOTAL_PHASES: 7]
+
+## Phase Overview
+
+| Phase | Name | Focus |
+|-------|------|-------|
+| 1 | Foundation | Project setup, input, player controller, camera, test room |
+| 2 | Combat Core | Weapons, damage, health, enemy AI, hit feedback |
+| 3 | Dungeon Generation | Pyramid DAG floors, room prefabs, path choice, minimap |
+| 4 | Characters & Enemies | 2 characters (Malinois, Vizsla), 6 enemies, 3 bosses |
+| 5 | The Kennel (Base) | Home base, dog management, upgrades, resource economy |
+| 6 | Co-op | 2-player local, shared camera, enemy scaling, revive |
+| 7 | Polish & UI | Menus, audio, particles, difficulty scaling, game feel |
+
+## Project Conventions
+
+- Architecture: Singleton + Events + ScriptableObject trinity pattern
+- All game data in ScriptableObjects (no magic numbers in MonoBehaviours)
+- Systems communicate via `GameEvents` static event bus
+- Combat parameters tunable via AnimationCurves
+- Folder structure: `Scripts/`, `ScriptableObjects/`, `Prefabs/`, `Scenes/`, `Art/`, `Audio/`, `Animations/`, `Editor/`, `Settings/`
+- Branch naming: `feat/TXXX-task-name`
+- Commit format: `[Phase N] TXXX: Brief description`

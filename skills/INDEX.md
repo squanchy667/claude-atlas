@@ -1,6 +1,6 @@
 # Skills Index
 
-> Last updated: [DATE]
+> Last updated: 2026-03-11
 
 > This file is auto-updated by Atlas commands. Do not edit manually.
 
@@ -18,7 +18,13 @@ Baseline skills created during `/atlas-setup` based on the project's stack and t
 
 | Skill | Category | What It Solves | When to Use |
 |-------|----------|---------------|-------------|
-| — | — | Created during /atlas-setup | — |
+| [unity-project-structure](foundation/unity-project-structure.md) | Architecture | Consistent folder structure for Unity project | Starting any new script, prefab, or asset |
+| [singleton-events-pattern](foundation/singleton-events-pattern.md) | Architecture | Singleton + Events + SO communication pattern | Creating managers, inter-system communication |
+| [scriptableobject-data-pattern](foundation/scriptableobject-data-pattern.md) | Data | Convention for SO definitions and usage | Defining game config data (characters, weapons, etc.) |
+| [combat-feel-tuning](foundation/combat-feel-tuning.md) | Game Feel | Screen shake, hitstop, knockback, input buffering | Implementing combat interactions, Phase 7 polish |
+| [room-prefab-conventions](foundation/room-prefab-conventions.md) | Level Design | Room prefab structure and naming standards | Creating room prefabs for dungeon generation |
+| [git-workflow](foundation/git-workflow.md) | Workflow | Branching, commits, Unity-specific Git concerns | Every commit and branch operation |
+| [editor-scripting](foundation/editor-scripting.md) | Workflow | Automating Unity Editor tasks from CLI | Creating scenes, prefabs, SO assets programmatically |
 
 ## Archive
 
@@ -40,7 +46,8 @@ Skills that solved a specific problem and are no longer actively needed. Kept fo
 - Integration
 - UI/UX
 - Workflow
-- [Project-specific categories added as needed]
+- Game Feel
+- Level Design
 
 ---
 

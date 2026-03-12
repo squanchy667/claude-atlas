@@ -10,12 +10,12 @@ Read this immediately after CLAUDE.md. It tells you where the project stands and
 
 | Field | Value |
 |-------|-------|
-| Project | [NOT CONFIGURED] |
-| Current Phase | [NOT STARTED] |
-| Current Task | [NONE] |
-| Last Activity | [NONE] |
-| Health | [UNKNOWN] |
-| Blockers | [NONE] |
+| Project | DogPack Roguelite |
+| Current Phase | 1 — Foundation (complete, pending checkpoint review) |
+| Current Task | None (phase complete) |
+| Last Activity | 2026-03-11: Phase 1 complete — 7/7 tasks done, checkpoint pending |
+| Health | Phase 1 delivered, 3 drift items need review |
+| Blockers | Checkpoint review required before Phase 2 |
 | Team Mode | Inactive |
 
 ---
@@ -81,7 +81,7 @@ memory/mistakes.md                  -- What went wrong before and how to avoid i
 | Data model work | + project/data-model.md, memory/decisions.md |
 | Integration work | + project/integrations.md |
 | Complex / high-risk | + memory/mistakes.md, memory/patterns.md |
-| Phase planning | phases/phase-N/plan.md, project/overview.md, atlas/gaps.md |
+| Phase planning | phases/phase-N/phase.md, project/overview.md, atlas/gaps.md |
 
 ---
 
@@ -90,15 +90,17 @@ memory/mistakes.md                  -- What went wrong before and how to avoid i
 Where to find everything in this repository.
 
 ### Project Definition
-- `project/overview.md` -- Vision, goals, success criteria
-- `project/architecture.md` -- System design, modules, boundaries
-- `project/data-model.md` -- Schemas, entities, relationships
-- `project/integrations.md` -- External services, APIs, auth flows
+- `project/overview.md` -- Vision, goals, success criteria, failure conditions, non-scope
+- `project/architecture.md` -- System design, tech stack, modules, architectural rules
+- `project/data-model.md` -- ScriptableObject entities, runtime state, persisted state
+- `project/integrations.md` -- Unity packages (no external services)
 
 ### Planning
-- `phases/` -- Phase plans with task breakdowns
+- `phases/INDEX.md` -- Phase map with 7 phases
+- `phases/phase-N/phase.md` -- Phase goals, deliverables, entry/exit criteria
+- `phases/phase-N/INDEX.md` -- Task table for phase N
 - `tasks/` -- Individual task specs, agreements, outcomes
-- `atlas/gaps.md` -- Known unknowns and unresolved questions
+- `atlas/gaps.md` -- 7 known unknowns from setup
 
 ### Execution
 - `status/progress.md` -- Current phase and task status
@@ -115,8 +117,8 @@ Where to find everything in this repository.
 - `memory/patterns.md` -- Reusable approaches that work
 
 ### Skills
-- `skills/INDEX.md` -- Master list of all skills
-- `skills/foundation/` -- Project-type skills (created at setup)
+- `skills/INDEX.md` -- Master list of all skills (7 foundation skills)
+- `skills/foundation/` -- Unity/C# project skills (7 files)
 - `skills/active/` -- Promoted skills (proven useful)
 - `skills/archive/` -- Retired skills (kept for reference)
 - `skills/imported/` -- Skills brought from other projects

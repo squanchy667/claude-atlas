@@ -1,4 +1,4 @@
-# Phases — [PROJECT_NAME]
+# Phases — DogPack Roguelite
 
 <!-- Auto-updated by hooks. Manual edits will be overwritten. -->
 
@@ -6,11 +6,13 @@
 
 | | Phase | Name | Status | Progress | Started | Completed |
 |---|-------|------|--------|----------|---------|-----------|
-| | 1 | [PHASE_1_NAME] | not started | 0/0 tasks | — | — |
-| | 2 | [PHASE_2_NAME] | not started | 0/0 tasks | — | — |
-| | 3 | [PHASE_3_NAME] | not started | 0/0 tasks | — | — |
-| | 4 | [PHASE_4_NAME] | not started | 0/0 tasks | — | — |
-| | 5 | [PHASE_5_NAME] | not started | 0/0 tasks | — | — |
+| >>> | 1 | Foundation | not started | 0/0 tasks | — | — |
+| | 2 | Combat Core | not started | 0/0 tasks | — | — |
+| | 3 | Dungeon Generation | not started | 0/0 tasks | — | — |
+| | 4 | Characters & Enemies | not started | 0/0 tasks | — | — |
+| | 5 | The Kennel (Base) | not started | 0/0 tasks | — | — |
+| | 6 | Co-op | not started | 0/0 tasks | — | — |
+| | 7 | Polish & UI | not started | 0/0 tasks | — | — |
 
 <!-- Active phase marker: replace the empty first column with ">>>" for the current phase. -->
 

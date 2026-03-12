@@ -4,6 +4,16 @@ This document explains how to initialize and configure a Claude Atlas project. T
 
 ---
 
+## Setup Status
+
+- **Setup Complete:** yes
+- **Preview Approved:** yes
+- **Approved:** 2026-03-11
+- **Gaps at setup:** 7 (all resolved)
+- **Decisions logged:** 9 (see memory/decisions.md)
+
+---
+
 ## /atlas-init -- Create the Structure
 
 Run this once at the beginning. It creates every folder and placeholder file that Atlas needs.
@@ -87,7 +97,7 @@ After the conversation, Atlas writes:
 | `project/architecture.md` | Tech stack, high-level system design, module boundaries |
 | `project/data-model.md` | Initial data entities (if discussed), placeholder if not |
 | `project/integrations.md` | External services, APIs, auth flows (if discussed), placeholder if not |
-| `phases/phase-N/plan.md` | One plan file per phase with theme and rough scope |
+| `phases/phase-N/phase.md` | One plan file per phase with theme and rough scope |
 | `skills/foundation/` | Foundation skills based on project type (e.g., react patterns, express conventions) |
 | `atlas/gaps.md` | Known risks converted to gap entries |
 | `CLAUDE.md` | Project details section filled with actual values |
