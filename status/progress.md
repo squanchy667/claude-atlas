@@ -6,9 +6,9 @@
 - **Project:** DogPack Roguelite
 - **Setup Complete:** yes
 - **Preview Approved:** yes
-- **Current Phase:** 3 — Dungeon Generation (pending planning)
-- **Phase Progress:** 0/0 tasks (not yet planned)
-- **Current Task:** None — run /plan-phase 3
+- **Current Phase:** 3 — Dungeon Generation (in progress)
+- **Phase Progress:** 0/8 tasks
+- **Current Task:** T015 — Dungeon Data ScriptableObjects
 - **Last Activity:** Phase 2 completed and closed. Memory consolidated.
 - **Last Updated:** 2026-03-12
 - **Team Mode:** no
@@ -25,7 +25,7 @@
 |-------|------|--------|-------|-----------|
 | 1 | Foundation | complete | 7/7 | 2026-03-11 |
 | 2 | Combat Core | complete | 7/7 | 2026-03-12 |
-| 3 | Dungeon Generation | not started | 0/0 | — |
+| 3 | Dungeon Generation | in progress | 0/8 | — |
 | 4 | Characters & Enemies | not started | 0/0 | — |
 | 5 | The Kennel (Base) | not started | 0/0 | — |
 | 6 | Co-op | not started | 0/0 | — |
