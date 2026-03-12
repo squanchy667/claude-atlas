@@ -8,7 +8,7 @@
 |---|-------|------|--------|----------|---------|-----------|
 | | 1 | Foundation | complete | 7/7 tasks | 2026-03-11 | 2026-03-11 |
 | | 2 | Combat Core | complete | 7/7 tasks | 2026-03-12 | 2026-03-12 |
-| >>> | 3 | Dungeon Generation | not started | 0/0 tasks | — | — |
+| >>> | 3 | Dungeon Generation | complete (pending review) | 8/8 tasks | 2026-03-12 | 2026-03-12 |
 | | 4 | Characters & Enemies | not started | 0/0 tasks | — | — |
 | | 5 | The Kennel (Base) | not started | 0/0 tasks | — | — |
 | | 6 | Co-op | not started | 0/0 tasks | — | — |

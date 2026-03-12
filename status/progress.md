@@ -6,10 +6,10 @@
 - **Project:** DogPack Roguelite
 - **Setup Complete:** yes
 - **Preview Approved:** yes
-- **Current Phase:** 3 — Dungeon Generation (in progress)
-- **Phase Progress:** 0/8 tasks
-- **Current Task:** T015 — Dungeon Data ScriptableObjects
-- **Last Activity:** Phase 2 completed and closed. Memory consolidated.
+- **Current Phase:** 3 — Dungeon Generation (complete, pending review)
+- **Phase Progress:** 8/8 tasks done
+- **Current Task:** None — Phase 3 code written, needs Unity testing
+- **Last Activity:** Phase 3 code complete. 12 new scripts: dungeon data, DAG generator, room system, doors, minimap, floor progression.
 - **Last Updated:** 2026-03-12
 - **Team Mode:** no
 
@@ -25,7 +25,7 @@
 |-------|------|--------|-------|-----------|
 | 1 | Foundation | complete | 7/7 | 2026-03-11 |
 | 2 | Combat Core | complete | 7/7 | 2026-03-12 |
-| 3 | Dungeon Generation | in progress | 0/8 | — |
+| 3 | Dungeon Generation | complete (pending review) | 8/8 | 2026-03-12 |
 | 4 | Characters & Enemies | not started | 0/0 | — |
 | 5 | The Kennel (Base) | not started | 0/0 | — |
 | 6 | Co-op | not started | 0/0 | — |
@@ -47,6 +47,8 @@
 | 2026-03-12 | Phase 2 partial verify | Attack works (C key), enemies chase. Health bar update issue unresolved. Paused. |
 | 2026-03-12 | T014 bugs fixed | Event timing, health bar rendering, enemy hit feedback all resolved. Phase 2 complete. |
 | 2026-03-12 | Phase 2 closed | Memory consolidated (3 patterns, 2 mistakes, 1 systemic drift). Advancing to Phase 3. |
+| 2026-03-12 | Phase 3 planned | 8 tasks (T015–T022), all agreements auto-approved. |
+| 2026-03-12 | Phase 3 code written | All 8 tasks implemented. 12 new scripts, 1 SceneSetup extension. Needs Unity testing. |
 
 ## Drift Summary (Active)
 
