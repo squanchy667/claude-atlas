@@ -58,6 +58,23 @@ See `atlas/commands.md` for full documentation of every command.
 
 ---
 
+## Examples
+
+Ready-to-paste setup answers for common project types:
+
+| Example | Type | Phases |
+|---------|------|--------|
+| [Unity 2D Game](atlas/examples/unity-2d-game.md) | Flappy Bird clone | 4 |
+| [CLI Tool](atlas/examples/cli-tool.md) | Note-taking CLI | 3 |
+| [Roguelite Game](atlas/examples/unity-roguelite.md) | Cult of the Lamb-inspired | 7 |
+| [Web App](atlas/examples/web-app.md) | Expense tracker (React + Express) | 6 |
+| [Chrome Extension](atlas/examples/chrome-extension.md) | Shopify admin helper | 5 |
+| [Blank Template](atlas/examples/template.md) | Fill in your own | - |
+
+See `atlas/examples/README.md` for tips on writing great setup answers.
+
+---
+
 ## How It Works
 
 The Atlas journey follows a loop:
