@@ -6,17 +6,17 @@
 - **Project:** DogPack Roguelite
 - **Setup Complete:** yes
 - **Preview Approved:** yes
-- **Current Phase:** 2 — Combat Core (in progress, paused)
-- **Phase Progress:** 6/7 tasks done, 1 in progress (T014 integration testing)
-- **Current Task:** T014 — Combat Test Scene Integration (needs Unity re-test)
-- **Last Activity:** Phase 2 code written, partially verified in Unity. Enemy chasing works. Player health bar update issue unresolved.
+- **Current Phase:** 2 — Combat Core (complete, pending checkpoint review)
+- **Phase Progress:** 7/7 tasks done
+- **Current Task:** None — Phase 2 complete, awaiting checkpoint approval
+- **Last Activity:** T014 bugs fixed (event timing, health bar, enemy hit feedback). All combat systems verified working.
 - **Last Updated:** 2026-03-12
 - **Team Mode:** no
 
 ## Health
 - [ ] Tests passing (no automated tests yet — Unity project)
 - [x] Documentation current
-- [ ] No open blockers (player health bar not updating — needs debug)
+- [x] No open blockers
 - [x] On schedule
 
 ## Phase Breakdown
@@ -24,7 +24,7 @@
 | Phase | Name | Status | Tasks | Completed |
 |-------|------|--------|-------|-----------|
 | 1 | Foundation | complete | 7/7 | 2026-03-11 |
-| 2 | Combat Core | in progress (paused) | 6/7 | — |
+| 2 | Combat Core | complete (pending review) | 7/7 | 2026-03-12 |
 | 3 | Dungeon Generation | not started | 0/0 | — |
 | 4 | Characters & Enemies | not started | 0/0 | — |
 | 5 | The Kennel (Base) | not started | 0/0 | — |
@@ -45,6 +45,7 @@
 | 2026-03-12 | Phase 2 planned | 7 tasks (T008–T014), all agreements approved |
 | 2026-03-12 | Phase 2 code written | T008–T013 implemented, T014 scene setup updated |
 | 2026-03-12 | Phase 2 partial verify | Attack works (C key), enemies chase. Health bar update issue unresolved. Paused. |
+| 2026-03-12 | T014 bugs fixed | Event timing, health bar rendering, enemy hit feedback all resolved. Phase 2 complete. |
 
 ## Drift Summary (Active)
 

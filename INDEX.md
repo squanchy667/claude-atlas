@@ -11,11 +11,11 @@ Read this immediately after CLAUDE.md. It tells you where the project stands and
 | Field | Value |
 |-------|-------|
 | Project | DogPack Roguelite |
-| Current Phase | 2 — Combat Core (in progress, paused) |
-| Current Task | T014 — Combat Test Scene Integration (needs Unity re-test) |
-| Last Activity | 2026-03-12: Phase 2 code written, partially verified. Paused for next session. |
-| Health | Attack works, enemies chase. Player health bar issue unresolved. |
-| Blockers | Player health bar not updating when enemies attack — needs debug next session |
+| Current Phase | 2 — Combat Core (complete, pending checkpoint review) |
+| Current Task | None — ready for Phase 3 planning |
+| Last Activity | 2026-03-12: Phase 2 complete. All 7 tasks done, all bugs fixed. |
+| Health | All systems verified working in Unity. |
+| Blockers | None |
 | Team Mode | Inactive |
 
 ---

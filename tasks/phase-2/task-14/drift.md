@@ -19,12 +19,10 @@
 ## Drift 3: Player Health Bar Not Updating
 - **Date:** 2026-03-12
 - **Severity:** HIGH
-- **What happened:** User confirmed enemies chase but player health bar shows no change. Root cause not yet confirmed — likely either:
-  1. Enemies reach Chasing state but never transition to Attacking (attack range too small?)
-  2. Player HealthSystem not initialized / not on player prefab
-  3. PlayerHealthUI `Start()` fallback not finding the player's HealthSystem
-- **Impact:** Cannot verify enemy damage → player, health bar display, or player death.
-- **Status:** UNRESOLVED — needs debug next session.
+- **What happened:** Health bar used Image.Type.Filled which doesn't render properly without a source sprite. Combined with OnPlayerSpawned race condition.
+- **Impact:** Health bar showed no change when player took damage.
+- **Fix applied:** Rewrote PlayerHealthUI to use RectTransform width scaling instead of fillAmount. Moved PlayerSpawned event from OnEnable to Start to fix subscription timing.
+- **Status:** RESOLVED
 
 ## Drift 4: C Key Attack Binding
 - **Date:** 2026-03-12
