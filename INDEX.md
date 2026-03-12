@@ -11,10 +11,10 @@ Read this immediately after CLAUDE.md. It tells you where the project stands and
 | Field | Value |
 |-------|-------|
 | Project | DogPack Roguelite |
-| Current Phase | 2 — Combat Core (complete, pending checkpoint review) |
-| Current Task | None — ready for Phase 3 planning |
-| Last Activity | 2026-03-12: Phase 2 complete. All 7 tasks done, all bugs fixed. |
-| Health | All systems verified working in Unity. |
+| Current Phase | 3 — Dungeon Generation (pending planning) |
+| Current Task | None — run /plan-phase 3 |
+| Last Activity | 2026-03-12: Phase 2 closed. Memory consolidated. Ready for Phase 3. |
+| Health | Green — all systems working. |
 | Blockers | None |
 | Team Mode | Inactive |
 

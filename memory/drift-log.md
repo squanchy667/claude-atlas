@@ -14,4 +14,10 @@
 - **Status:** Open / Addressed / Accepted
 -->
 
-No systemic drift patterns detected yet. The /complete-phase command scans all task drift files to surface recurring patterns.
+### Drift-Pattern-001: Unity API behavior assumptions
+- **First seen:** Phase 1, Task T004 (linearVelocity vs MovePosition)
+- **Also seen in:** Phase 1 T003 (gamepad binding), Phase 1 T005 (i-frames approach), Phase 2 T010 (InputAction callback vs polling), Phase 2 T014 (OnEnable order, Image.Type.Filled)
+- **Pattern:** Code is written based on how Unity APIs *should* work, but Unity's actual behavior differs — execution order, input callback reliability, UI rendering without sprites. Each time requires testing in Unity and rewriting the approach.
+- **Root cause hypothesis:** Unity's documentation doesn't always cover edge cases. Programmatic scene setup (no prefabs/editor workflow) exposes more of these edges.
+- **Proposed resolution:** Accepted as normal for programmatic Unity development. Mitigated by: (1) Pattern-001 (events in Start), (2) Pattern-002 (RectTransform for UI), (3) always test in Unity before marking tasks complete.
+- **Status:** Accepted — documented patterns prevent repeat occurrences
