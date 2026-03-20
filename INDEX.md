@@ -11,10 +11,10 @@ Read this immediately after CLAUDE.md. It tells you where the project stands and
 | Field | Value |
 |-------|-------|
 | Project | DogPack Roguelite |
-| Current Phase | 3 — Dungeon Generation (tested, open issues carried forward) |
-| Current Task | None — Phase 3 tested, 3 open issues carried to polish |
-| Last Activity | 2026-03-20: Phase 3 Unity tested. 6 bugs fixed, 3 open issues (invisible walls, floor colors, treasure/shop interaction). |
-| Health | Core dungeon functional. Visual polish items deferred. |
+| Current Phase | 3 — Dungeon Generation (complete, approved) |
+| Current Task | None — Phase 3 complete, ready for Phase 4 |
+| Last Activity | 2026-03-20: Phase 3 final fixes approved. Walls/floors visible, floor colors distinct. Ready for Phase 4. |
+| Health | Phases 1–3 complete. On track. |
 | Blockers | None |
 | Team Mode | Inactive |
 

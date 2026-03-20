@@ -55,3 +55,13 @@
 - **Impact:** Health bar appeared full regardless of actual health.
 - **Fix:** Replaced with RectTransform width scaling (sizeDelta.x). See Pattern-002.
 - **Prevention:** For programmatic UI without sprites, use RectTransform manipulation instead of Image fill modes.
+
+### Mistake-005: Non-serialized sprite fields lost between editor and runtime
+- **Date:** 2026-03-20
+- **Phase:** 3
+- **Discovered by:** Human testing (walls and floors completely invisible despite colliders working)
+- **What happened:** `DungeonGenerator` stored `wallSprite` and `floorSprite` as private fields without `[SerializeField]`. `SceneSetup.CreateDungeonTestScene()` called `SetSprites()` at edit time, but the values were lost when the scene was saved and reloaded in Play mode. All SpriteRenderers for walls and floors had null sprites — invisible but collidable.
+- **Root cause:** Private MonoBehaviour fields without `[SerializeField]` are not serialized into the scene file. Editor-time assignments vanish at runtime.
+- **Impact:** Every wall and floor in every room was invisible. Players collided with unseen barriers.
+- **Fix:** Added `EnsureSprites()` to DungeonGenerator that creates a 16x16 white sprite at runtime if sprites are null. Called at the start of `GenerateFloor()`.
+- **Prevention:** Any MonoBehaviour field that must survive between editor setup and Play mode needs either `[SerializeField]`, `public` access, or a runtime fallback. For programmatic scene setup, always assume private fields will be null at runtime and add fallback creation.

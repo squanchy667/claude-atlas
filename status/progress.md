@@ -6,10 +6,10 @@
 - **Project:** DogPack Roguelite
 - **Setup Complete:** yes
 - **Preview Approved:** yes
-- **Current Phase:** 3 — Dungeon Generation (tested, open issues carried forward)
+- **Current Phase:** 3 — Dungeon Generation (complete, approved)
 - **Phase Progress:** 8/8 tasks done
-- **Current Task:** None — Phase 3 tested in Unity, 3 open issues carried to polish
-- **Last Activity:** Phase 3 Unity testing complete. 6 drift events resolved, 3 open issues (invisible walls, floor color visibility, treasure/shop interaction) carried forward.
+- **Current Task:** None — Phase 3 complete, ready for Phase 4
+- **Last Activity:** Phase 3 final fixes: runtime sprite creation (walls/floors now visible), high-contrast floor colors. Only treasure/shop interaction deferred to Phase 5 by design.
 - **Last Updated:** 2026-03-20
 - **Team Mode:** no
 
@@ -25,7 +25,7 @@
 |-------|------|--------|-------|-----------|
 | 1 | Foundation | complete | 7/7 | 2026-03-11 |
 | 2 | Combat Core | complete | 7/7 | 2026-03-12 |
-| 3 | Dungeon Generation | complete (open issues carried) | 8/8 | 2026-03-20 |
+| 3 | Dungeon Generation | complete | 8/8 | 2026-03-20 |
 | 4 | Characters & Enemies | not started | 0/0 | — |
 | 5 | The Kennel (Base) | not started | 0/0 | — |
 | 6 | Co-op | not started | 0/0 | — |
@@ -49,7 +49,8 @@
 | 2026-03-12 | Phase 2 closed | Memory consolidated (3 patterns, 2 mistakes, 1 systemic drift). Advancing to Phase 3. |
 | 2026-03-12 | Phase 3 planned | 8 tasks (T015–T022), all agreements auto-approved. |
 | 2026-03-12 | Phase 3 code written | All 8 tasks implemented. 12 new scripts, 1 SceneSetup extension. Needs Unity testing. |
-| 2026-03-20 | Phase 3 Unity tested | Iterative testing: 6 major bugs fixed (door conflicts, teleport bounce, minimap clipping, restart singletons, boss depth, Input System). 3 open issues carried forward (invisible walls, floor colors, treasure/shop interaction). |
+| 2026-03-20 | Phase 3 Unity tested | Iterative testing: 6 major bugs fixed (door conflicts, teleport bounce, minimap clipping, restart singletons, boss depth, Input System). 3 open issues identified. |
+| 2026-03-20 | Phase 3 fixes approved | Runtime sprite fix (walls/floors visible), high-contrast floor colors. 2/3 open issues resolved. Treasure/shop deferred to Phase 5 by design. Phase 3 complete. |
 
 ## Drift Summary (Active)
 

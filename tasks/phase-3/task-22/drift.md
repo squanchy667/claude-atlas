@@ -50,19 +50,27 @@
 - **Resolution:** Migrated to `Keyboard.current.rKey.wasPressedThisFrame` with `using UnityEngine.InputSystem`.
 - **Impact:** GameOverUI.cs.
 
+### Drift-007: Runtime sprites null — walls and floors invisible
+- **Date:** 2026-03-20
+- **Severity:** High
+- **What happened:** Walls and floors were completely invisible at runtime despite colliders working. Players got stuck on invisible walls with no visual feedback.
+- **Root cause:** `DungeonGenerator.wallSprite` and `floorSprite` are private non-serialized fields. `SetSprites()` was called at editor time in `SceneSetup.CreateDungeonTestScene()`, but the values were lost when the scene was saved and reloaded in Play mode. All `SpriteRenderer` components received null sprites.
+- **Resolution:** Added `EnsureSprites()` method to `DungeonGenerator` that creates a 16x16 white runtime sprite if sprites are null. Called at the start of `GenerateFloor()`. Also increased wall thickness (1f → 1.5f), added black outline borders behind walls, and set high-contrast floor colors per floor.
+- **Impact:** DungeonGenerator.cs, RoomBuilder.cs, RunManager.cs, SceneSetup.cs.
+
 ## Open Issues (Not Yet Resolved)
 
-### Issue-001: Invisible wall colliders
-- **Severity:** Medium
-- **What:** Player hits invisible barriers around rooms, especially near doors and portals. Wall colors were brightened but still not visible enough against dark background, or some colliders exist without corresponding visuals.
-- **Status:** NOT FIXED — carried to Phase 4 or polish phase.
-
-### Issue-002: Treasure/Shop rooms not interactive
+### Issue-001: Treasure/Shop rooms not interactive
 - **Severity:** Medium
 - **What:** Treasure rooms show a gold block and shop rooms show a green block, but player cannot interact with them. No pickup, no shop UI, no reward.
 - **Status:** BY DESIGN for Phase 3. Treasure/shop interaction is Phase 5 (The Kennel / economy) scope.
 
-### Issue-003: Floor color changes not noticeable
-- **Severity:** Low
-- **What:** Despite updating floor and wall colors for all 3 floors (blue-gray, brown, purple), visual difference between floors was not noticeable to the user during playtesting.
-- **Status:** NOT FIXED — may need stronger color differentiation or tilemap-based approach in Phase 7 (Polish).
+## Resolved Issues
+
+### Issue-002: Invisible wall colliders — FIXED
+- **Resolved:** 2026-03-20
+- **Fix:** Root cause was null sprites at runtime (Drift-007). Walls now render with thick outlines and high-contrast colors.
+
+### Issue-003: Floor color changes not noticeable — FIXED
+- **Resolved:** 2026-03-20
+- **Fix:** Replaced muted colors with high-saturation palette: steel-blue (F1), sandy gold (F2), vivid magenta (F3). Visible immediately.

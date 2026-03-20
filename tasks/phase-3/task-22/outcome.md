@@ -27,17 +27,17 @@ Full Phase 3 Unity integration testing and bug fixing session. All core dungeon 
 - [x] Shop rooms show green marker
 - [x] Boss room requires 3+ transitions from start
 - [x] Input System migration (no legacy Input.GetKeyDown)
-- [ ] Invisible wall colliders — walls not visually distinct enough
-- [ ] Floor color differences not noticeable between floors
+- [x] Walls visible with thick outlines and high-contrast colors (runtime sprite fix)
+- [x] Floor color differences clearly distinct between floors (high-saturation palette)
 - [ ] Treasure/shop rooms not interactive (by design — Phase 5 scope)
 
 ## Files Changed
 
 | File | Change |
 |------|--------|
-| `Scripts/Dungeon/DungeonGenerator.cs` | Major rewrite: conflict-free door directions, teleport cooldown, velocity clearing |
+| `Scripts/Dungeon/DungeonGenerator.cs` | Major rewrite: conflict-free door directions, teleport cooldown, velocity clearing, runtime sprite creation |
 | `Scripts/Dungeon/FloorGraph.cs` | Boss path depth fix (middleRooms <= 1 threshold) |
-| `Scripts/Dungeon/RoomBuilder.cs` | DOOR_WIDTH 2f → 3f |
+| `Scripts/Dungeon/RoomBuilder.cs` | DOOR_WIDTH 2f → 3f, WALL_THICKNESS 1f → 1.5f, black outline borders, sorting order fix |
 | `Scripts/Dungeon/RoomController.cs` | Added SpawnRoomMarker() for treasure/shop visual markers |
 | `Scripts/Core/RunManager.cs` | Floor colors: blue-gray/brown/purple with brighter walls |
 | `Scripts/UI/MinimapUI.cs` | Complete rewrite: RectMask2D, padding, sizing, color coding |
@@ -47,8 +47,8 @@ Full Phase 3 Unity integration testing and bug fixing session. All core dungeon 
 
 ## Drift Events
 
-6 drift events logged (see drift.md). 3 High, 2 Medium, 1 Low.
-All resolved except 3 open issues carried forward.
+7 drift events logged (see drift.md). 4 High, 2 Medium, 1 Low.
+All resolved. 1 open issue (treasure/shop interaction) deferred to Phase 5 by design.
 
 ## Notes
 
