@@ -6,10 +6,10 @@
 - **Project:** DogPack Roguelite
 - **Setup Complete:** yes
 - **Preview Approved:** yes
-- **Current Phase:** 3 — Dungeon Generation (complete, approved)
+- **Current Phase:** 4 — Characters & Enemies (code written, needs Unity testing)
 - **Phase Progress:** 8/8 tasks done
-- **Current Task:** None — Phase 3 complete, ready for Phase 4
-- **Last Activity:** Phase 3 final fixes: runtime sprite creation (walls/floors now visible), high-contrast floor colors. Only treasure/shop interaction deferred to Phase 5 by design.
+- **Current Task:** None — Phase 4 code written, awaiting Unity testing
+- **Last Activity:** Phase 4 implemented: 8 tasks (T023–T030) all code written. 2 characters, 6 enemy types, 3 bosses, loot system, character select.
 - **Last Updated:** 2026-03-20
 - **Team Mode:** no
 
@@ -26,7 +26,7 @@
 | 1 | Foundation | complete | 7/7 | 2026-03-11 |
 | 2 | Combat Core | complete | 7/7 | 2026-03-12 |
 | 3 | Dungeon Generation | complete | 8/8 | 2026-03-20 |
-| 4 | Characters & Enemies | not started | 0/0 | — |
+| 4 | Characters & Enemies | code written | 8/8 | 2026-03-20 |
 | 5 | The Kennel (Base) | not started | 0/0 | — |
 | 6 | Co-op | not started | 0/0 | — |
 | 7 | Polish & UI | not started | 0/0 | — |
@@ -51,6 +51,8 @@
 | 2026-03-12 | Phase 3 code written | All 8 tasks implemented. 12 new scripts, 1 SceneSetup extension. Needs Unity testing. |
 | 2026-03-20 | Phase 3 Unity tested | Iterative testing: 6 major bugs fixed (door conflicts, teleport bounce, minimap clipping, restart singletons, boss depth, Input System). 3 open issues identified. |
 | 2026-03-20 | Phase 3 fixes approved | Runtime sprite fix (walls/floors visible), high-contrast floor colors. 2/3 open issues resolved. Treasure/shop deferred to Phase 5 by design. Phase 3 complete. |
+| 2026-03-20 | Phase 4 planned | 8 tasks (T023–T030): character data, abilities, passives, char select, 6 enemy types, 3 bosses, loot system, integration test. All agreements approved. |
+| 2026-03-20 | Phase 4 code written | All 8 tasks implemented. 20+ new scripts. Needs Unity testing. |
 
 ## Drift Summary (Active)
 
