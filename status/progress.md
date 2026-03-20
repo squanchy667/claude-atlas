@@ -6,11 +6,11 @@
 - **Project:** DogPack Roguelite
 - **Setup Complete:** yes
 - **Preview Approved:** yes
-- **Current Phase:** 3 — Dungeon Generation (complete, pending review)
+- **Current Phase:** 3 — Dungeon Generation (tested, open issues carried forward)
 - **Phase Progress:** 8/8 tasks done
-- **Current Task:** None — Phase 3 code written, needs Unity testing
-- **Last Activity:** Phase 3 code complete. 12 new scripts: dungeon data, DAG generator, room system, doors, minimap, floor progression.
-- **Last Updated:** 2026-03-12
+- **Current Task:** None — Phase 3 tested in Unity, 3 open issues carried to polish
+- **Last Activity:** Phase 3 Unity testing complete. 6 drift events resolved, 3 open issues (invisible walls, floor color visibility, treasure/shop interaction) carried forward.
+- **Last Updated:** 2026-03-20
 - **Team Mode:** no
 
 ## Health
@@ -25,7 +25,7 @@
 |-------|------|--------|-------|-----------|
 | 1 | Foundation | complete | 7/7 | 2026-03-11 |
 | 2 | Combat Core | complete | 7/7 | 2026-03-12 |
-| 3 | Dungeon Generation | complete (pending review) | 8/8 | 2026-03-12 |
+| 3 | Dungeon Generation | complete (open issues carried) | 8/8 | 2026-03-20 |
 | 4 | Characters & Enemies | not started | 0/0 | — |
 | 5 | The Kennel (Base) | not started | 0/0 | — |
 | 6 | Co-op | not started | 0/0 | — |
@@ -49,6 +49,7 @@
 | 2026-03-12 | Phase 2 closed | Memory consolidated (3 patterns, 2 mistakes, 1 systemic drift). Advancing to Phase 3. |
 | 2026-03-12 | Phase 3 planned | 8 tasks (T015–T022), all agreements auto-approved. |
 | 2026-03-12 | Phase 3 code written | All 8 tasks implemented. 12 new scripts, 1 SceneSetup extension. Needs Unity testing. |
+| 2026-03-20 | Phase 3 Unity tested | Iterative testing: 6 major bugs fixed (door conflicts, teleport bounce, minimap clipping, restart singletons, boss depth, Input System). 3 open issues carried forward (invisible walls, floor colors, treasure/shop interaction). |
 
 ## Drift Summary (Active)
 
@@ -61,3 +62,9 @@
 | 2 | T010 | Added direct C key fallback alongside InputSystem | Low |
 | 2 | T014 | Event timing: OnPlayerSpawned fires before subscribers ready | High |
 | 2 | T014 | Player health bar not updating when enemies attack | High |
+| 3 | T022 | Door direction wall conflicts — required full graph pre-computation | High |
+| 3 | T022 | Teleport ping-pong between doors — added cooldown | High |
+| 3 | T022 | Minimap clipping/sizing — ~5 iterations, rewrote to RectMask2D | Medium |
+| 3 | T022 | DontDestroyOnLoad singletons persist across restart | High |
+| 3 | T022 | Boss reachable in 2 transitions — tightened layer threshold | Medium |
+| 3 | T022 | Legacy Input.GetKeyDown deprecation — migrated to Input System | Low |

@@ -26,7 +26,27 @@
 - **Fix:** Move event firing to Start(). Keep Start() fallbacks as safety nets.
 - **Prevention:** Always fire "I exist" events in Start(), never in OnEnable(). See Pattern-001.
 
-### Mistake-002: Image.Type.Filled without source sprite
+### Mistake-002: Door direction assigned per-connection, not per-graph
+- **Date:** 2026-03-20
+- **Phase:** 3
+- **Discovered by:** Unity testing (doors stacked on same wall, rooms unnavigable)
+- **What happened:** `GetDirectionTo()` chose door direction based only on the two rooms being connected, ignoring other connections on the same room. A room with 3+ connections could end up with 2 doors on the same wall.
+- **Root cause:** Treated direction assignment as a local problem. It's a graph-wide constraint satisfaction problem.
+- **Impact:** Dungeon unplayable — doors overlapped, rooms inaccessible.
+- **Fix:** Pre-compute all directions across the graph in `AssignDoorDirections()`, tracking used directions per room.
+- **Prevention:** Any per-node constraint in procedural generation needs a full graph pass. See Pattern-003.
+
+### Mistake-003: No teleport cooldown on door transitions
+- **Date:** 2026-03-20
+- **Phase:** 3
+- **Discovered by:** Unity testing (player bounced infinitely between two doors)
+- **What happened:** Player entered door A trigger → teleported to door B → immediately overlapped door B trigger → teleported back to door A → infinite loop.
+- **Root cause:** No cooldown or disable period after teleport. Player's collider overlaps destination door on arrival.
+- **Impact:** Doors completely broken. Player stuck bouncing.
+- **Fix:** Added 0.4s teleport cooldown + clear velocity on arrival.
+- **Prevention:** Any teleport/warp system needs a cooldown or disable window to prevent re-triggering at destination.
+
+### Mistake-004: Image.Type.Filled without source sprite
 - **Date:** 2026-03-12
 - **Phase:** 2
 - **Discovered by:** Unity testing (health bar showed no change)

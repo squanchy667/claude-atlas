@@ -36,7 +36,27 @@
 - **Example:** `fillRect.sizeDelta = new Vector2(barWidth * ratio, fillRect.sizeDelta.y)`
 - **Related skills:** None
 
-### Pattern-003: Bidirectional hit feedback
+### Pattern-003: Pre-compute graph constraints before building
+- **Category:** Architecture
+- **Discovered in:** Phase 3, Task T022
+- **Problem it solves:** Per-connection direction/resource assignment conflicts in procedural generation
+- **The pattern:** When a graph has per-node constraints (e.g., max one door per wall direction), iterate all connections first and assign values in a conflict-free pre-computation pass. Store results in a lookup dictionary. Then build rooms/nodes using the pre-computed values.
+- **When to use:** Any procedural generation where node properties depend on their connections
+- **When NOT to use:** Simple 1:1 relationships with no conflicts possible
+- **Example:** `AssignDoorDirections()` iterates all connection pairs, assigns directions checking both endpoints' used sets, stores in `connectionDirections` dictionary
+- **Related skills:** None
+
+### Pattern-004: Destroy DontDestroyOnLoad singletons before scene reload
+- **Category:** Architecture
+- **Discovered in:** Phase 3, Task T022
+- **Problem it solves:** Singletons persist across scene reload, causing duplicate detection to destroy new scene objects
+- **The pattern:** Before calling `SceneManager.LoadScene()`, explicitly destroy all DontDestroyOnLoad singleton GameObjects and call `GameEvents.ClearAll()` to reset the static event bus. This ensures the new scene starts completely fresh.
+- **When to use:** Any "restart" or "return to menu" flow
+- **When NOT to use:** Additive scene loading where singletons should persist
+- **Example:** GameOverUI.RestartRun() destroys GameManager, RunManager, DungeonGenerator instances before LoadScene
+- **Related skills:** singleton-events-pattern
+
+### Pattern-005: Bidirectional hit feedback
 - **Category:** Game Feel
 - **Discovered in:** Phase 2, Task T014
 - **Problem it solves:** Missing visual feedback when enemies attack the player
