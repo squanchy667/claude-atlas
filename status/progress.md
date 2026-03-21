@@ -6,10 +6,10 @@
 - **Project:** DogPack Roguelite
 - **Setup Complete:** yes
 - **Preview Approved:** yes
-- **Current Phase:** 5 — The Kennel (code written, needs Unity testing)
+- **Current Phase:** 5 — The Kennel (complete, approved)
 - **Phase Progress:** 8/8 tasks done
-- **Current Task:** None — Phase 5 code written, awaiting Unity testing
-- **Last Activity:** Phase 5 implemented: 8 tasks (T031–T038). Kennel scene, dog roster, buildings, upgrades, save/load, scene transitions.
+- **Current Task:** None — Phase 5 complete, ready for Phase 6
+- **Last Activity:** Phase 5 approved. Full Kennel ↔ Dungeon loop validated. Minor bug: room backtrack can skip to boss (deferred to Phase 7).
 - **Last Updated:** 2026-03-20
 - **Team Mode:** no
 
@@ -27,7 +27,7 @@
 | 2 | Combat Core | complete | 7/7 | 2026-03-12 |
 | 3 | Dungeon Generation | complete | 8/8 | 2026-03-20 |
 | 4 | Characters & Enemies | complete | 8/8 | 2026-03-20 |
-| 5 | The Kennel (Base) | code written | 8/8 | 2026-03-20 |
+| 5 | The Kennel (Base) | complete | 8/8 | 2026-03-20 |
 | 6 | Co-op | not started | 0/0 | — |
 | 7 | Polish & UI | not started | 0/0 | — |
 
@@ -55,6 +55,7 @@
 | 2026-03-20 | Phase 4 code written | All 8 tasks implemented. 20+ new scripts. Needs Unity testing. |
 | 2026-03-20 | Phase 4 approved | Unity tested. 5 bug fixes + 4 balance iterations. Full 3-floor run validated. |
 | 2026-03-20 | Phase 5 code written | 8 tasks (T031–T038). Kennel scene, dogs, buildings, upgrades, save/load, scene transitions. Needs Unity testing. |
+| 2026-03-20 | Phase 5 approved | Unity tested. 3 bug fixes (UpgradeManager NullRef, EventSystem missing, Build Settings). Full Kennel↔Dungeon loop validated. |
 
 ## Drift Summary (Active)
 
@@ -73,3 +74,4 @@
 | 3 | T022 | DontDestroyOnLoad singletons persist across restart | High |
 | 3 | T022 | Boss reachable in 2 transitions — tightened layer threshold | Medium |
 | 3 | T022 | Legacy Input.GetKeyDown deprecation — migrated to Input System | Low |
+| 5 | T038 | Room backtrack can skip to boss on Floor 2/3 — DAG short paths | Medium |
