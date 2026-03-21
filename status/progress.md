@@ -6,10 +6,10 @@
 - **Project:** DogPack Roguelite
 - **Setup Complete:** yes
 - **Preview Approved:** yes
-- **Current Phase:** 5 — The Kennel (complete, approved)
-- **Phase Progress:** 8/8 tasks done
-- **Current Task:** None — Phase 5 complete, ready for Phase 6
-- **Last Activity:** Phase 5 approved. Full Kennel ↔ Dungeon loop validated. Minor bug: room backtrack can skip to boss (deferred to Phase 7).
+- **Current Phase:** 6 — Co-op (code written, needs Unity testing)
+- **Phase Progress:** 7/7 tasks done
+- **Current Task:** None — Phase 6 code written, awaiting Unity testing
+- **Last Activity:** Phase 6 implemented: 7 tasks (T039–T045). 2-player co-op, revive, enemy scaling, dual UI.
 - **Last Updated:** 2026-03-20
 - **Team Mode:** no
 
@@ -28,7 +28,7 @@
 | 3 | Dungeon Generation | complete | 8/8 | 2026-03-20 |
 | 4 | Characters & Enemies | complete | 8/8 | 2026-03-20 |
 | 5 | The Kennel (Base) | complete | 8/8 | 2026-03-20 |
-| 6 | Co-op | not started | 0/0 | — |
+| 6 | Co-op | code written | 7/7 | 2026-03-20 |
 | 7 | Polish & UI | not started | 0/0 | — |
 
 ## Recent Activity
@@ -56,6 +56,7 @@
 | 2026-03-20 | Phase 4 approved | Unity tested. 5 bug fixes + 4 balance iterations. Full 3-floor run validated. |
 | 2026-03-20 | Phase 5 code written | 8 tasks (T031–T038). Kennel scene, dogs, buildings, upgrades, save/load, scene transitions. Needs Unity testing. |
 | 2026-03-20 | Phase 5 approved | Unity tested. 3 bug fixes (UpgradeManager NullRef, EventSystem missing, Build Settings). Full Kennel↔Dungeon loop validated. |
+| 2026-03-20 | Phase 6 code written | 7 tasks (T039–T045). CoopManager, P2 join/leave, dual UI, camera leash, enemy scaling, revive mechanic. |
 
 ## Drift Summary (Active)
 

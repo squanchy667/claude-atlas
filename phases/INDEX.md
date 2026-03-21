@@ -11,7 +11,7 @@
 | | 3 | Dungeon Generation | complete | 8/8 tasks | 2026-03-12 | 2026-03-20 |
 | | 4 | Characters & Enemies | complete | 8/8 tasks | 2026-03-20 | 2026-03-20 |
 | | 5 | The Kennel (Base) | complete | 8/8 tasks | 2026-03-20 | 2026-03-20 |
-| | 6 | Co-op | not started | 0/0 tasks | — | — |
+| >>> | 6 | Co-op | code written | 7/7 tasks | 2026-03-20 | — |
 | | 7 | Polish & UI | not started | 0/0 tasks | — | — |
 
 <!-- Active phase marker: replace the empty first column with ">>>" for the current phase. -->
