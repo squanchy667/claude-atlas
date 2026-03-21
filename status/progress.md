@@ -6,10 +6,10 @@
 - **Project:** DogPack Roguelite
 - **Setup Complete:** yes
 - **Preview Approved:** yes
-- **Current Phase:** 4 — Characters & Enemies (complete, approved)
+- **Current Phase:** 5 — The Kennel (code written, needs Unity testing)
 - **Phase Progress:** 8/8 tasks done
-- **Current Task:** None — Phase 4 complete, ready for Phase 5
-- **Last Activity:** Phase 4 approved after Unity testing. Balance tuned across 5 iterations.
+- **Current Task:** None — Phase 5 code written, awaiting Unity testing
+- **Last Activity:** Phase 5 implemented: 8 tasks (T031–T038). Kennel scene, dog roster, buildings, upgrades, save/load, scene transitions.
 - **Last Updated:** 2026-03-20
 - **Team Mode:** no
 
@@ -27,7 +27,7 @@
 | 2 | Combat Core | complete | 7/7 | 2026-03-12 |
 | 3 | Dungeon Generation | complete | 8/8 | 2026-03-20 |
 | 4 | Characters & Enemies | complete | 8/8 | 2026-03-20 |
-| 5 | The Kennel (Base) | not started | 0/0 | — |
+| 5 | The Kennel (Base) | code written | 8/8 | 2026-03-20 |
 | 6 | Co-op | not started | 0/0 | — |
 | 7 | Polish & UI | not started | 0/0 | — |
 
@@ -54,6 +54,7 @@
 | 2026-03-20 | Phase 4 planned | 8 tasks (T023–T030): character data, abilities, passives, char select, 6 enemy types, 3 bosses, loot system, integration test. All agreements approved. |
 | 2026-03-20 | Phase 4 code written | All 8 tasks implemented. 20+ new scripts. Needs Unity testing. |
 | 2026-03-20 | Phase 4 approved | Unity tested. 5 bug fixes + 4 balance iterations. Full 3-floor run validated. |
+| 2026-03-20 | Phase 5 code written | 8 tasks (T031–T038). Kennel scene, dogs, buildings, upgrades, save/load, scene transitions. Needs Unity testing. |
 
 ## Drift Summary (Active)
 
