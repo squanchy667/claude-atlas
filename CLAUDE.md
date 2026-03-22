@@ -175,7 +175,7 @@ When active:
 [REPO_PATH: /Users/ofek/Projects/Claude/AtlasTest/CultRoguelite/]
 [TEAM_SIZE: 1 (solo)]
 [CURRENT_PHASE: 7 (pending planning)]
-[TOTAL_PHASES: 7]
+[TOTAL_PHASES: 8]
 
 ## Phase Overview
 
@@ -188,6 +188,7 @@ When active:
 | 5 | The Kennel (Base) | Home base, dog management, upgrades, resource economy |
 | 6 | Co-op | 2-player local, shared camera, enemy scaling, revive |
 | 7 | Polish & UI | Menus, audio, particles, difficulty scaling, game feel |
+| 8 | Human Polish | Interactive play-test → feedback → fix loop per area |
 
 ## Project Conventions
 

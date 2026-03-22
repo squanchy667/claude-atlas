@@ -13,6 +13,7 @@
 | | 5 | The Kennel (Base) | complete | 8/8 tasks | 2026-03-20 | 2026-03-20 |
 | | 6 | Co-op | complete | 7/7 tasks | 2026-03-20 | 2026-03-22 |
 | | 7 | Polish & UI | not started | 0/0 tasks | — | — |
+| | 8 | Human Polish | not started | dynamic | — | — |
 
 <!-- Active phase marker: replace the empty first column with ">>>" for the current phase. -->
 
