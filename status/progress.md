@@ -6,10 +6,10 @@
 - **Project:** DogPack Roguelite
 - **Setup Complete:** yes
 - **Preview Approved:** yes
-- **Current Phase:** 6 — Co-op (complete, approved)
-- **Phase Progress:** 7/7 tasks done
-- **Current Task:** None — Phase 6 complete, ready for Phase 7
-- **Last Activity:** Phase 6 approved. Co-op functional with known issues deferred to Phase 7.
+- **Current Phase:** 7 — Polish & UI (code written, needs Unity testing)
+- **Phase Progress:** 8/8 tasks done
+- **Current Task:** None — Phase 7 code written, awaiting Unity testing
+- **Last Activity:** Phase 7 implemented: 8 tasks (T046–T053). Menus, audio, particles, fades, difficulty curves, game feel.
 - **Last Updated:** 2026-03-20
 - **Team Mode:** no
 
@@ -29,7 +29,7 @@
 | 4 | Characters & Enemies | complete | 8/8 | 2026-03-20 |
 | 5 | The Kennel (Base) | complete | 8/8 | 2026-03-20 |
 | 6 | Co-op | complete | 7/7 | 2026-03-22 |
-| 7 | Polish & UI | not started | 0/0 | — |
+| 7 | Polish & UI | code written | 8/8 | 2026-03-22 |
 
 ## Recent Activity
 
@@ -58,6 +58,7 @@
 | 2026-03-20 | Phase 5 approved | Unity tested. 3 bug fixes (UpgradeManager NullRef, EventSystem missing, Build Settings). Full Kennel↔Dungeon loop validated. |
 | 2026-03-20 | Phase 6 code written | 7 tasks (T039–T045). CoopManager, P2 join/leave, dual UI, camera leash, enemy scaling, revive mechanic. |
 | 2026-03-22 | Phase 6 approved | Co-op tested. 4 bug fixes (doors, targeting, color, revive). 3 known issues deferred to Phase 7. |
+| 2026-03-22 | Phase 7 code written | 8 tasks (T046–T053). Main menu, pause, audio, fades, particles, difficulty, game feel. |
 
 ## Drift Summary (Active)
 
