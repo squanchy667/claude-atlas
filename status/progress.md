@@ -6,10 +6,10 @@
 - **Project:** DogPack Roguelite
 - **Setup Complete:** yes
 - **Preview Approved:** yes
-- **Current Phase:** 6 — Co-op (code written, needs Unity testing)
+- **Current Phase:** 6 — Co-op (complete, approved)
 - **Phase Progress:** 7/7 tasks done
-- **Current Task:** None — Phase 6 code written, awaiting Unity testing
-- **Last Activity:** Phase 6 implemented: 7 tasks (T039–T045). 2-player co-op, revive, enemy scaling, dual UI.
+- **Current Task:** None — Phase 6 complete, ready for Phase 7
+- **Last Activity:** Phase 6 approved. Co-op functional with known issues deferred to Phase 7.
 - **Last Updated:** 2026-03-20
 - **Team Mode:** no
 
@@ -28,7 +28,7 @@
 | 3 | Dungeon Generation | complete | 8/8 | 2026-03-20 |
 | 4 | Characters & Enemies | complete | 8/8 | 2026-03-20 |
 | 5 | The Kennel (Base) | complete | 8/8 | 2026-03-20 |
-| 6 | Co-op | code written | 7/7 | 2026-03-20 |
+| 6 | Co-op | complete | 7/7 | 2026-03-22 |
 | 7 | Polish & UI | not started | 0/0 | — |
 
 ## Recent Activity
@@ -57,6 +57,7 @@
 | 2026-03-20 | Phase 5 code written | 8 tasks (T031–T038). Kennel scene, dogs, buildings, upgrades, save/load, scene transitions. Needs Unity testing. |
 | 2026-03-20 | Phase 5 approved | Unity tested. 3 bug fixes (UpgradeManager NullRef, EventSystem missing, Build Settings). Full Kennel↔Dungeon loop validated. |
 | 2026-03-20 | Phase 6 code written | 7 tasks (T039–T045). CoopManager, P2 join/leave, dual UI, camera leash, enemy scaling, revive mechanic. |
+| 2026-03-22 | Phase 6 approved | Co-op tested. 4 bug fixes (doors, targeting, color, revive). 3 known issues deferred to Phase 7. |
 
 ## Drift Summary (Active)
 
@@ -79,3 +80,6 @@
 | 6 | T045 | P2 couldn't pass through doors — teleport only moved P1 | High |
 | 6 | T045 | Enemies retargeted to P2 and stopped attacking P1 | High |
 | 6 | T045 | P1 and P2 same color — no visual distinction | Medium |
+| 6 | T045 | Enemies only target reviver after revive — need retarget event | Low |
+| 6 | T045 | P2 rejoin gives full HP — no penalty for leave/rejoin | Low |
+| 6 | T045 | Co-op char select: only P1 chooses, no P2 independent selection | Medium |
