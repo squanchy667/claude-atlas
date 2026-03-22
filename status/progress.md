@@ -76,3 +76,6 @@
 | 3 | T022 | Boss reachable in 2 transitions — tightened layer threshold | Medium |
 | 3 | T022 | Legacy Input.GetKeyDown deprecation — migrated to Input System | Low |
 | 5 | T038 | Room backtrack can skip to boss on Floor 2/3 — DAG short paths | Medium |
+| 6 | T045 | P2 couldn't pass through doors — teleport only moved P1 | High |
+| 6 | T045 | Enemies retargeted to P2 and stopped attacking P1 | High |
+| 6 | T045 | P1 and P2 same color — no visual distinction | Medium |

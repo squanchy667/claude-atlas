@@ -19,6 +19,10 @@ Integration wiring to connect all Phase 6 co-op systems. CoopManager added to bo
 | Editor/SceneSetup.cs | Modified — CoopManager creation in both scenes |
 | Scripts/UI/GameOverUI.cs | Modified — checks all players dead before game over |
 | Scripts/Core/SceneTransitionManager.cs | Modified — preserves CoopManager across scene transitions |
+| Scripts/Dungeon/Door.cs | Modified — pass entering player transform to teleport |
+| Scripts/Dungeon/DungeonGenerator.cs | Modified — teleport all players on door entry |
+| Scripts/Enemies/EnemyController.cs | Modified — FindNearestPlayer targeting |
+| Scripts/Player/PlayerManager.cs | Modified — P2 contrasting color |
 
 ## Drift Events
-None.
+3 drift events logged (see drift.md). 2 High, 1 Medium. All resolved.

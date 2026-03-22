@@ -65,3 +65,13 @@
 - **Impact:** Every wall and floor in every room was invisible. Players collided with unseen barriers.
 - **Fix:** Added `EnsureSprites()` to DungeonGenerator that creates a 16x16 white sprite at runtime if sprites are null. Called at the start of `GenerateFloor()`.
 - **Prevention:** Any MonoBehaviour field that must survive between editor setup and Play mode needs either `[SerializeField]`, `public` access, or a runtime fallback. For programmatic scene setup, always assume private fields will be null at runtime and add fallback creation.
+
+### Mistake-006: Single-target assumption breaks in co-op
+- **Date:** 2026-03-22
+- **Phase:** 6
+- **Discovered by:** Unity testing (P2 stuck, enemies idle)
+- **What happened:** Multiple systems assumed a single player: door teleport used a stored P1 reference, enemy targeting set target to last spawned player overwriting previous target.
+- **Root cause:** Systems designed for single-player stored one `playerTransform` or `target` reference. Adding a second player caused last-write-wins conflicts.
+- **Impact:** Doors only teleported P1. Enemies all chased P2 through walls.
+- **Fix:** Doors now teleport all players. Enemies find nearest alive player dynamically.
+- **Prevention:** Any system that references "the player" must be reviewed for co-op compatibility. Use FindObjectsByType<PlayerController> for multi-player queries, not stored single references.

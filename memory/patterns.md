@@ -65,3 +65,13 @@
 - **When NOT to use:** Passive effects or damage-over-time (no flash/knockback, just health drain)
 - **Example:** EnemyController.AttackTarget triggers flash + knockback + shake on the player
 - **Related skills:** combat-feel-tuning
+
+### Pattern-006: Find nearest player for co-op targeting
+- **Category:** Architecture
+- **Discovered in:** Phase 6, Task T045
+- **Problem it solves:** Single-target references break when multiple players exist
+- **The pattern:** Instead of storing a single `target` reference from OnPlayerSpawned, use `FindObjectsByType<PlayerController>()` and pick the nearest alive, non-downed player. Re-evaluate periodically (every ~0.5s) to handle target switching when players move or die.
+- **When to use:** Any enemy, NPC, or system that needs to reference "the player"
+- **When NOT to use:** UI systems that need to track a specific player (use isPlayer2 flag instead)
+- **Example:** EnemyController.FindNearestPlayer() iterates all PlayerControllers, filters dead/downed, picks closest by distance
+- **Related skills:** None
