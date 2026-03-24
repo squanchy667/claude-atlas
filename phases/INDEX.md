@@ -12,8 +12,8 @@
 | | 4 | Characters & Enemies | complete | 8/8 tasks | 2026-03-20 | 2026-03-20 |
 | | 5 | The Kennel (Base) | complete | 8/8 tasks | 2026-03-20 | 2026-03-20 |
 | | 6 | Co-op | complete | 7/7 tasks | 2026-03-20 | 2026-03-22 |
-| >>> | 7 | Polish & UI | code written | 8/8 tasks | 2026-03-22 | — |
-| | 8 | Human Polish | not started | dynamic | — | — |
+| | 7 | Polish & UI | complete | 8/8 tasks | 2026-03-22 | 2026-03-24 |
+| >>> | 8 | Human Polish | pending | dynamic | — | — |
 
 <!-- Active phase marker: replace the empty first column with ">>>" for the current phase. -->
 

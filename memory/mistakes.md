@@ -75,3 +75,13 @@
 - **Impact:** Doors only teleported P1. Enemies all chased P2 through walls.
 - **Fix:** Doors now teleport all players. Enemies find nearest alive player dynamically.
 - **Prevention:** Any system that references "the player" must be reviewed for co-op compatibility. Use FindObjectsByType<PlayerController> for multi-player queries, not stored single references.
+
+### Mistake-007: Shared GameObject for multiple singletons
+- **Date:** 2026-03-22
+- **Phase:** 7
+- **Discovered by:** Full code audit (game completely broken after Phase 7)
+- **What happened:** All singletons lived on one "--- Managers ---" GameObject. Singleton.Awake called Destroy(gameObject) on duplicates, cascade-destroying all sibling singletons. Scene transitions destroyed wrong components.
+- **Root cause:** Singleton base class assumed one singleton per GO. SceneSetup put 10+ components on one GO for simplicity.
+- **Impact:** Game completely broke after Phase 7 — couldn't start runs, no audio, no character data.
+- **Fix:** Changed Singleton.Awake to Destroy(this) instead of Destroy(gameObject). Added SceneManager.sceneLoaded re-subscribe pattern to all persistent singletons.
+- **Prevention:** Singleton.Awake must NEVER call Destroy(gameObject). Always Destroy(this). Any singleton that survives scene transitions must re-subscribe to events via SceneManager.sceneLoaded.

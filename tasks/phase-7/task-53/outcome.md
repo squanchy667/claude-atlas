@@ -25,7 +25,33 @@ Integration wiring to connect all Phase 7 systems across all scenes. SceneSetup 
 |------|--------|
 | Editor/SceneSetup.cs | Modified — AudioManager, ParticleEventListener, GameFeelManager creation in all scenes |
 | Scripts/Kennel/KennelStartTrigger.cs | Modified — triggers kennel music theme on scene load |
-| Scripts/Core/SceneTransitionManager.cs | Modified — coordinates music switches and screen fades on transitions |
+| Scripts/Core/SceneTransitionManager.cs | Modified — coordinates music switches and screen fades on transitions; reverted ScreenFade coroutine wrapping |
+| Scripts/Core/Singleton.cs | Modified — Destroy(this) instead of Destroy(gameObject) to prevent cascade destruction |
+| Scripts/Core/GameEvents.cs | Modified — removed ClearAll from normal scene transitions |
+| Scripts/Core/PlayerManager.cs | Modified — SceneManager.sceneLoaded re-subscribe pattern |
+| Scripts/Audio/AudioManager.cs | Modified — SceneManager.sceneLoaded re-subscribe pattern for dungeon music |
+| Scripts/Core/MainMenuUI.cs | Modified — removed singleton destruction before scene load |
+| Scripts/Combat/WeaponController.cs | Modified — skip PlayerController targets (no friendly fire) |
+| Scripts/Combat/AbilityController.cs | Modified — skip PlayerController targets (no friendly fire) |
+| Scripts/Player/PlayerController.cs | Modified — removed OnPause handler (PauseMenuUI is sole Escape handler) |
+| Scripts/Core/CoopManager.cs | Modified — reset references and re-subscribe on scene load; P2 health init on spawn |
+| Scripts/Core/PauseMenuUI.cs | Modified — sole Escape key handler |
+| Scripts/Dungeon/DungeonGenerator.cs | Modified — teleport players to start room center on floor transition; hasSpawnedPortalThisFloor flag |
+| Scripts/Dungeon/ReviveSystem.cs | Modified — removed bleedout death, disabled collider + kinematic on downed player, auto-revive on room clear |
 
 ## Drift Events
-None.
+11 drift events documented in `tasks/phase-7/task-53/drift.md`.
+
+| ID | Severity | Summary |
+|----|----------|---------|
+| Drift-001 | Critical | Singleton cascade destruction — Destroy(gameObject) killed all singletons on shared GO |
+| Drift-002 | Critical | ClearAll deafened surviving singletons — never re-subscribed |
+| Drift-003 | High | MainMenuUI destroyed singletons before scene load |
+| Drift-004 | High | ScreenFade coroutine wrapping broke scene loads |
+| Drift-005 | Medium | Friendly fire between co-op players |
+| Drift-006 | Medium | Revive timer too short / dead player pushable |
+| Drift-007 | Low | No dungeon music — AudioManager subscriptions lost |
+| Drift-008 | High | Co-op broken on second run + P2 invincible on rejoin |
+| Drift-009 | Medium | Double Escape handling froze then paused |
+| Drift-010 | Medium | Floor transition spawn outside map |
+| Drift-011 | Medium | Floor portal present before boss killed |

@@ -6,11 +6,11 @@
 - **Project:** DogPack Roguelite
 - **Setup Complete:** yes
 - **Preview Approved:** yes
-- **Current Phase:** 7 — Polish & UI (code written, needs Unity testing)
+- **Current Phase:** 7 — Polish & UI (complete, tested)
 - **Phase Progress:** 8/8 tasks done
-- **Current Task:** None — Phase 7 code written, awaiting Unity testing
-- **Last Activity:** Phase 7 implemented: 8 tasks (T046–T053). Menus, audio, particles, fades, difficulty curves, game feel.
-- **Last Updated:** 2026-03-20
+- **Current Task:** None — Phase 7 complete
+- **Last Activity:** Phase 7 Unity tested: 11 drift events found and fixed. Singleton cascade, scene transitions, co-op bugs, audio, floor transitions all resolved.
+- **Last Updated:** 2026-03-24
 - **Team Mode:** no
 
 ## Health
@@ -29,7 +29,7 @@
 | 4 | Characters & Enemies | complete | 8/8 | 2026-03-20 |
 | 5 | The Kennel (Base) | complete | 8/8 | 2026-03-20 |
 | 6 | Co-op | complete | 7/7 | 2026-03-22 |
-| 7 | Polish & UI | code written | 8/8 | 2026-03-22 |
+| 7 | Polish & UI | complete | 8/8 | 2026-03-24 |
 
 ## Recent Activity
 
@@ -59,6 +59,7 @@
 | 2026-03-20 | Phase 6 code written | 7 tasks (T039–T045). CoopManager, P2 join/leave, dual UI, camera leash, enemy scaling, revive mechanic. |
 | 2026-03-22 | Phase 6 approved | Co-op tested. 4 bug fixes (doors, targeting, color, revive). 3 known issues deferred to Phase 7. |
 | 2026-03-22 | Phase 7 code written | 8 tasks (T046–T053). Main menu, pause, audio, fades, particles, difficulty, game feel. |
+| 2026-03-24 | Phase 7 Unity tested | 11 drift events found and fixed. Singleton cascade, scene transitions, co-op, audio, floor transitions all resolved. |
 
 ## Drift Summary (Active)
 
@@ -84,3 +85,14 @@
 | 6 | T045 | Enemies only target reviver after revive — need retarget event | Low |
 | 6 | T045 | P2 rejoin gives full HP — no penalty for leave/rejoin | Low |
 | 6 | T045 | Co-op char select: only P1 chooses, no P2 independent selection | Medium |
+| 7 | T053 | Singleton cascade destruction — Destroy(gameObject) killed all singletons on shared GO | Critical |
+| 7 | T053 | ClearAll deafened surviving singletons — never re-subscribed | Critical |
+| 7 | T053 | MainMenuUI destroyed singletons before scene load | High |
+| 7 | T053 | ScreenFade coroutine wrapping broke scene loads | High |
+| 7 | T053 | Friendly fire between co-op players | Medium |
+| 7 | T053 | Revive timer too short / dead player pushable | Medium |
+| 7 | T053 | No dungeon music — AudioManager subscriptions lost | Low |
+| 7 | T053 | Co-op broken on second run + P2 invincible | High |
+| 7 | T053 | Double Escape handling froze then paused | Medium |
+| 7 | T053 | Floor transition spawn outside map | Medium |
+| 7 | T053 | Floor portal before boss killed | Medium |

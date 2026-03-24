@@ -75,3 +75,13 @@
 - **When NOT to use:** UI systems that need to track a specific player (use isPlayer2 flag instead)
 - **Example:** EnemyController.FindNearestPlayer() iterates all PlayerControllers, filters dead/downed, picks closest by distance
 - **Related skills:** None
+
+### Pattern-007: SceneManager.sceneLoaded re-subscribe for persistent singletons
+- **Category:** Architecture
+- **Discovered in:** Phase 7, Task T053
+- **Problem it solves:** Surviving singletons lose GameEvents subscriptions after scene transitions (ClearAll or natural destruction of event sources)
+- **The pattern:** In OnEnable, subscribe to SceneManager.sceneLoaded. In the callback, unsubscribe then re-subscribe to all GameEvents. In OnDisable, unsubscribe from sceneLoaded.
+- **When to use:** Any DontDestroyOnLoad singleton that subscribes to GameEvents
+- **When NOT to use:** Scene-local MonoBehaviours (they're destroyed with the scene)
+- **Example:** AudioManager, PlayerManager, CoopManager all use this pattern
+- **Related skills:** singleton-events-pattern

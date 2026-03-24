@@ -11,10 +11,10 @@ Read this immediately after CLAUDE.md. It tells you where the project stands and
 | Field | Value |
 |-------|-------|
 | Project | DogPack Roguelite |
-| Current Phase | 7 — Polish & UI (code written, needs Unity testing) |
-| Current Task | None — all 8 tasks implemented, awaiting Unity testing |
-| Last Activity | 2026-03-22: Phase 7 code written. Menus, audio, particles, fades, game feel. |
-| Health | Phases 1–6 complete. Phase 7 code written. On track. |
+| Current Phase | 7 — Polish & UI (complete, tested) |
+| Current Task | None — Phase 7 complete, ready for Phase 8 |
+| Last Activity | 2026-03-24: Phase 7 tested. 11 drift events fixed. Ready for Human Polish. |
+| Health | Phases 1–7 complete. On track. |
 | Blockers | None |
 | Team Mode | Inactive |
 
