@@ -6,10 +6,10 @@
 - **Project:** DogPack Roguelite
 - **Setup Complete:** yes
 - **Preview Approved:** yes
-- **Current Phase:** 7 — Polish & UI (complete, tested)
-- **Phase Progress:** 8/8 tasks done
-- **Current Task:** None — Phase 7 complete
-- **Last Activity:** Phase 7 Unity tested: 11 drift events found and fixed. Singleton cascade, scene transitions, co-op bugs, audio, floor transitions all resolved.
+- **Current Phase:** 8 — Human Polish (in progress)
+- **Phase Progress:** Dynamic tasks, co-op debugging active
+- **Current Task:** Co-op stability — fixes applied, awaiting retest
+- **Last Activity:** Phase 8 started. 8 bug fixes applied (GameState reset, CoopManager refs, FloorGraph crash, boss targeting, friendly fire, revive, downed physics, dungeon music). Unity MCP installed for log scanning.
 - **Last Updated:** 2026-03-24
 - **Team Mode:** no
 
@@ -60,6 +60,7 @@
 | 2026-03-22 | Phase 6 approved | Co-op tested. 4 bug fixes (doors, targeting, color, revive). 3 known issues deferred to Phase 7. |
 | 2026-03-22 | Phase 7 code written | 8 tasks (T046–T053). Main menu, pause, audio, fades, particles, difficulty, game feel. |
 | 2026-03-24 | Phase 7 Unity tested | 11 drift events found and fixed. Singleton cascade, scene transitions, co-op, audio, floor transitions all resolved. |
+| 2026-03-24 | Phase 8 started | 8 gameplay bugs fixed (co-op, bosses, revive, music). Unity MCP (ozankasikci/unity-editor-mcp) installed for log scanning. |
 
 ## Drift Summary (Active)
 
